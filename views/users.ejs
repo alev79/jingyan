@@ -1,0 +1,15 @@
+<%- include('header') %>
+		<h1>
+			<%= name.toUpperCase() %>
+		</h1>
+		<p>
+			Hello,<%=	name %>
+		</p>
+		<ul>
+			<% for(var i =0; i < frameworks.length; i++) {%>
+				<li>
+					<%= frameworks[i] %>
+				</li>
+			<% } %>
+		</ul>
+<%- include('footer') %>

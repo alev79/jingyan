@@ -1,0 +1,12 @@
+<div class="nav-setting">
+	<div>
+		<% if(user) { %>
+			<a href="/posts?author=<%= user._id %>">个人主页</a>
+			<a href="/posts/create">发表文章</a>
+			<a href="/signout">登出</a>
+		<% } else { %>
+			<a href="/signin">登录</a>
+			<a href="/signup">注册</a>
+		<% } %>
+	</div>
+</div>

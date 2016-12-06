@@ -1,0 +1,11 @@
+<%- include('header') %>
+	文章列表
+	<% if (posts.length) { -%>
+		<% posts.forEach((post)=>{ %>
+			<%- include('components/post-content',{post:post}) %>
+		<% }) %>
+	<% } else { -%>
+		<p>没有文章，要不来写一段</p>
+	<% } -%>
+
+<%- include('footer') %>

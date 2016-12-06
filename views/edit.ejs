@@ -1,0 +1,27 @@
+<%- include('header') %>
+	<div>
+		<a 
+			href="/posts?author<%= user._id %>"
+			data-title="<%= user.name %> | <%= ({m:'男',f:'女',x:'保密'})[user.gender] %>"
+			data-content="<%= user.bio %>">
+			<img class="avatar" src="/img/<%= user.avatar %>">
+		</a>
+	</div>
+	<div>
+		<form action="/posts/<%= post._id %>/edit" method="post">		
+			<div>
+				<label for="title">
+					标题
+				</label>
+				<input type="text" name="title" value="<%= post.title %>">
+			</div>
+			<div>
+				<label for="content">
+					内容
+				</label>
+				<textarea name="content" id="content" cols="30" rows="10"><%= post.content %></textarea>
+			</div>
+			<input type="submit" value="发布">
+		</form>
+	</div>
+<%- include('footer') %>

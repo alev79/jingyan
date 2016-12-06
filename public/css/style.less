@@ -1,0 +1,61 @@
+body {
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 40px
+}
+
+@theme-color: #4fc08d;
+a:hover {
+  border-bottom: 3px solid @theme-color
+}
+
+.button {
+  background-color: @theme-color;
+  color: #fff;
+}
+
+.avatar {
+  border-radius: 3px;
+  width: 48px;
+  height: 48px;
+  float: left;
+}
+
+.nav {
+  margin-bottom: 20px;
+  color: #999;
+  text-align: center;
+  h1 {
+    color: @theme-color;
+    display: inline-block;
+    margin: 10px 0
+  }
+}
+
+.nav-setting {
+  position: fixed;
+  right: 30px;
+  top: 35px;
+  z-index: 999;
+}
+
+.post-content {
+  h3 {
+    a {
+      color: @theme-color;
+    }
+  }
+  .tag {
+    font-size: 13px;
+    margin-right: 5px;
+    color: #999;
+    .right {
+      float: right;
+      margin-right: 0;
+      a {
+        color: #999;
+      }
+    }
+  }
+}

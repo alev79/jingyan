@@ -1,0 +1,33 @@
+<%- include('header') %>
+	<form method="post" enctype="multipart/form-data">
+		<div>
+			<label for="name">用户名</label>
+			<input type="text" placeholder="请输入用户名，限制在1-10个字符" name="name" id="name">
+		</div>
+		<div>
+			<label for="password">密码</label>
+			<input type="password" placeholder="请输入密码，至少6个字符" name="password" id="password">
+		</div>
+		<div>
+			<label for="repassword">再次输入密码</label>
+			<input type="password" placeholder="请再次输入密码" name="repassword" id="repassword">
+		</div>
+		<div>
+			<label for="gender">性别</label>
+			<select name="gender" id="gender">
+				<option value="m">男</option>
+				<option value="f">女</option>
+				<option value="x">保密</option>
+			</select>
+		</div>
+		<div>
+			<label for="avatar">头像</label>
+			<input type="file" name="avatar" id="avatar">
+		</div>
+		<div>
+			<label for="bio">个人简介</label>
+			<textarea name="bio" id="bio" cols="30" rows="10"></textarea>
+		</div>
+		<input type="submit" value="注册">
+	</form>
+<%- include('footer') %>

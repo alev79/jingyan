@@ -1,0 +1,30 @@
+<% comments.forEach((comment)=> { %>
+	<div class="comment">
+		<h1>评论区</h1>
+		<img src="/img/<%= comment.author.avatar %>" class="avatar"/>
+		<div class="content">
+			<a href="/posts?author=<%= comment.author._id %>" class="author">
+				<%= comment.author.name %>
+			</a>
+			<div>
+				<%= comment.created_at %>
+			</div>
+			<div>
+				<%- comment.content %>
+			</div>
+			<% if (user && comment.author._id && user._id.toString()===comment.author._id.toString()) { -%>
+				<a href="/posts/<%= post._id%>/comment/<%= comment._id%>/remove">
+					删除
+				</a>
+			<% } %>
+		</div>
+	</div>
+<% }) %>
+
+<% if (user) { -%>
+	<form method="post" action="/posts/<%= post._id%>/comment">
+	  <textarea name="content"></textarea>
+	  <input type="submit" value="留言">
+	</form>
+<% } %>
+
